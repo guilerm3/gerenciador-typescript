@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
+# Todo List com React e TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de uma aplicação de lista de tarefas (To-Do List) desenvolvida com React e TypeScript. O aplicativo permite aos usuários adicionar, marcar como concluídas, excluir e alterar o tema (claro/escuro). Além disso, as tarefas são armazenadas no `localStorage` para persistência entre as sessões.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Adicionar tarefa**: Permite adicionar novas tarefas à lista.
+- **Marcar como concluída**: Permite marcar as tarefas como concluídas, alterando seu estado visual.
+- **Excluir tarefa**: Permite remover tarefas da lista.
+- **Alterar tema**: O usuário pode alternar entre o tema claro e o tema escuro.
+- **Persistência de dados**: As tarefas são armazenadas no `localStorage` para garantir que as tarefas não sejam perdidas quando a página for recarregada.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática ao código.
+- **localStorage**: API do navegador que armazena dados localmente no navegador do usuário.
 
-- Configure the top-level `parserOptions` property like this:
+## Instruções para Execução
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 1. Clonar o repositório
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+```bash
+git clone https://github.com/guilerm3/gerenciador-typescript.git
+cd gerenciador-typescript
